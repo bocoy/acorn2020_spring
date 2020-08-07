@@ -1,0 +1,16 @@
+package com.gura.spring02;
+
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class FriendsController {
+	@RequestMapping("friends")
+	public String friends(HttpServletRequest request) {
+		request.setAttribute("이름", "김구라");
+		return "friends";
+	}
+}
