@@ -61,7 +61,7 @@ public class MemberDaoImpl implements MemberDao{
 		 * - resultType 은 select 된 row 하나를 담을 데이터를 type 을 의미한다.
 		 */
 		MemberDto dto=session.selectOne("member.getData", num);
-		return null;
+		return dto;
 	}
 
 	@Override //여러개의 row를 가지고 올때
@@ -73,7 +73,7 @@ public class MemberDaoImpl implements MemberDao{
 		 * 이 resultType 이 된다.
 		 */
 		List<MemberDto> list= session.selectList("member.getList");
-		return null;
+		return list;
 	}
 	
 }
